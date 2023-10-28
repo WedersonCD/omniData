@@ -1,0 +1,55 @@
+.carousel {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 40px;
+    width: 800px; /* Largura total considerando 4 cards de 250px e margens */
+
+}
+
+.carroussel-setas {
+    margin-top:16px;
+    display: flex;
+    width: 600px;
+    justify-content: space-around;
+}
+
+.card-container {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    /* Isso garantirá que os cards extras sejam ocultados */
+}
+
+.card {
+    width: 280px;
+    padding: 20px;
+    margin: 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 0 0 auto;
+}
+
+.card:hover {
+    color:white;
+    background-color: rgba(66,133,244,1);   /* Apenas um exemplo, você pode escolher a cor que preferir */
+    cursor: pointer;  /* Muda o cursor para a mãozinha quando passa o mouse sobre o card */
+}
+
+.prev, .next {
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.prev:hover, .next:hover {
+    color: rgb(66, 133, 244);
+}

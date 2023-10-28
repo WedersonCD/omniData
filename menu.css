@@ -1,0 +1,16 @@
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.3); /* fundo transparente */
+    display: flex;
+    align-items: center;
+    z-index: 1000; /* para garantir que o menu fique no topo de outros elementos */
+}
+
+.logo {
+    height: 40px; /* ou o tamanho que você preferir */
+    margin-right: 20px;
+}
