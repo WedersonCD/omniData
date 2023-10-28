@@ -1,7 +1,14 @@
+html {
+display: flex;
+justify-content: center;
+
+}
+
 body {
     padding-top: 60px;
     font-family: Arial, sans-serif;
     height: 100vh;
+    width: 100vh;
     margin: 0;
     padding: 0;
     display: flex;
@@ -35,7 +42,7 @@ h1 {
     outline: none;
 }
 
-#searchBtn {
+.botao {
     padding: 10px 15px;
     background-color: #4285f4;
     color: #fff;

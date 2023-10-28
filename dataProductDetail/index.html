@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles.css">
-
     <link rel="stylesheet" href="styles.css">
+    <script async defer src="https://apis.google.com/js/api.js"></script>
 
 </head>
 
@@ -17,7 +17,7 @@
                     <h3>OmniData</h3>
                 </a></div>
             <input type="text" id="searchInput" placeholder="Pesquisar...">
-            <button id="searchBtn">Pesquisar</button>
+            <button class="botao" id="searchBtn">Pesquisar</button>
         </div>
 
         <div class="product-description-container">
@@ -27,11 +27,6 @@
                     <h2 class="product-description-container-resume-title-name">
                         Data Product
                     </h2>
-                    <img src="fillStar.png" />
-                    <img src="fillStar.png" />
-                    <img src="fillStar.png" />
-                    <img src="emptyStar.png" />
-                    <img src="emptyStar.png" />
                 </div>
                 <div class="product-description-container-resume-description">
                     <p>
@@ -46,86 +41,19 @@
                     </div>
 
                 </div>
+                <div>
+                    <button class="botao" id="yourButtonId">Taste the data!</button>
+                </div>
             </div>
             <div class="product-description-container-sample">
                 <h3>Sample Data</h3>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Nome</th>
-                            <th>Domínio</th>
-                            <th>Responsável</th>
-                            <th>Formato</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>DadosDeVenda</td>
-                            <td>Venda</td>
-                            <td>Maria Silva</td>
-                            <td>SQL</td>
-                        </tr>
-                        <tr>
-                            <td>RegistroDeEstoque</td>
-                            <td>Estoque</td>
-                            <td>José Oliveira</td>
-                            <td>CSV</td>
-                        </tr>
-                        <tr>
-                            <td>PerfilDoCliente</td>
-                            <td>Cliente</td>
-                            <td>Ana Pereira</td>
-                            <td>QVD</td>
-                        </tr>
-                        <tr>
-                            <td>HistóricoDeVenda</td>
-                            <td>Venda</td>
-                            <td>Carlos Sousa</td>
-                            <td>SQL</td>
-                        </tr>
-                        <tr>
-                            <td>MovimentaçãoDeEstoque</td>
-                            <td>Estoque</td>
-                            <td>Luís Almeida</td>
-                            <td>CSV</td>
-                        </tr>
-                        <tr>
-                            <td>FeedbackDoCliente</td>
-                            <td>Cliente</td>
-                            <td>Paula Ferreira</td>
-                            <td>QVD</td>
-                        </tr>
-                        <tr>
-                            <td>AnáliseDeVenda</td>
-                            <td>Venda</td>
-                            <td>Fernanda Costa</td>
-                            <td>SQL</td>
-                        </tr>
-                        <tr>
-                            <td>ControleDeEstoque</td>
-                            <td>Estoque</td>
-                            <td>Rodrigo Barros</td>
-                            <td>CSV</td>
-                        </tr>
-                        <tr>
-                            <td>ComportamentoDoCliente</td>
-                            <td>Cliente</td>
-                            <td>Beatriz Rocha</td>
-                            <td>QVD</td>
-                        </tr>
-                        <tr>
-                            <td>PrevisãoDeVenda</td>
-                            <td>Venda</td>
-                            <td>Tiago Martins</td>
-                            <td>SQL</td>
-                        </tr>
-                    </tbody>
-                </table>
+
             </div>
         </div>
 
     </div>
     <script src="../script.js"></script>
+    <script src="../utils.js"></script>
     <script src="script.js"></script>
 
 </body>

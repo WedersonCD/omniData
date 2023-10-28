@@ -1,5 +1,6 @@
 body {
     align-items: baseline;
+
 }
 
 .search-container a{
@@ -10,14 +11,14 @@ body {
 
 .product-description-container {
     display: flex;
-    width: 100vh;
     height: 400px;
     justify-content: space-around;
+    min-width: 1000px;
 
 }
 
 .product-description-container-resume {
-    max-width: 400px;
+    max-width: 500px;
     flex:1;
     display: flex;
     align-items: start;
@@ -40,6 +41,11 @@ body {
     align-items: baseline;    
 }
 
+.product-description-container-resume-title-stars{
+    flex-direction: row;
+    display: flex;
+}
+
 .product-description-container-resume-title img {
     height: 20px;
 }
@@ -48,10 +54,12 @@ body {
     text-align: justify;
 }
 
+
+
 .product-description-container-sample {
     flex:1;
     font-size: 12px;
-    max-width: 400px;
+    max-width: 500px;
     max-height: 400px;
     overflow: scroll;
 }
