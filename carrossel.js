@@ -29,7 +29,8 @@ function getDataProductCard(dataProduct) {
     card.className = 'card';
 
     // Crie o link
-    card.addEventListener('click', (dataProduct)=>{
+    card.addEventListener('click', ()=>{
+        sessionStorage.setItem('selectedDataProduct', JSON.stringify(dataProduct));
         document.location = './dataProductDetail/index.html'
     });
 

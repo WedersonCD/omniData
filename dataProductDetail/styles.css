@@ -17,6 +17,7 @@ body {
 }
 
 .product-description-container-resume {
+    max-width: 400px;
     flex:1;
     display: flex;
     align-items: start;
@@ -25,7 +26,7 @@ body {
 
 }
 
-.product-description-container-resume h1{
+.product-description-container-resume-title-name{
     margin-top: 0px;
     text-wrap: nowrap;
 }
