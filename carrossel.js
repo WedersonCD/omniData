@@ -30,7 +30,7 @@ function getDataProductCard(dataProduct) {
 
     // Crie o link
     card.addEventListener('click', (dataProduct)=>{
-        dataProductClick(dataProduct)
+        document.location = './dataProductDetail/index.html'
     });
 
     // Criar e adicionar o título do produto (nome)
