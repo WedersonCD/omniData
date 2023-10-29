@@ -62,7 +62,7 @@ function loadClient() {
 function createSpreadsheet(dataObject) {
     return gapi.client.sheets.spreadsheets.create({}, {
         "properties": {
-            "title": "Nova Planilha"
+            "title": "Nova planilho"
         },
         "sheets": [
             {

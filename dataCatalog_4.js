@@ -16,11 +16,11 @@ document.getElementById("searchBtn").addEventListener("click", function() {
 
 let checkInterval;
 
-function checkAppStatus() {
+async function checkAppStatus() {
     if (typeof GLOBAL_APP_OPENED !== "undefined") {
         if (GLOBAL_APP_OPENED === true) {
             console.log("O aplicativo foi aberto!");
-			createCards()
+			await createCards()
 			hideLoadingScreen()
             clearInterval(checkInterval); // Parar de checar após encontrar a condição desejada
         } else {
@@ -31,4 +31,4 @@ function checkAppStatus() {
     }
 }
 
-checkInterval = setInterval(checkAppStatus, 2000); // Verificar a cada 2 segundos
+checkInterval = setInterval( checkAppStatus, 2000); // Verificar a cada 2 segundos

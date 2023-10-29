@@ -62,8 +62,7 @@ function setDataProductCARD(dataProduct) {
 
 
 async function createCards() {
-    const dataProducts = await getDataProducts()
-
+    const dataProducts = await getDataProducts();
     dataProducts.forEach((dataProduct) => {
         setDataProductCARD(dataProduct)
 
