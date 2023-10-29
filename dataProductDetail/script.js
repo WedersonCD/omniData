@@ -7,9 +7,6 @@ elemento=elemento[0]
 
 emptyStar = document.createElement('img')
 emptyStar.src='emptyStar.png'
-console.log(emptyStar)
-console.log(elemento)
-console.log(currentDataProduct.score)
 
 for(x=0;x<currentDataProduct.score;x++){
     fillStar=document.createElement('img')
@@ -34,7 +31,9 @@ elemento.innerHTML =htmlTable
 tags=[
     {class:'.product-description-container-resume-domain', valor: currentDataProduct.dominio},
     {class:'.product-description-container-resume-title-name', valor: currentDataProduct.nome},
-    {class:'.product-description-container-resume-responsavel-nome', valor: currentDataProduct.responsavel}
+    {class:'.product-description-container-resume-responsavel-nome', valor: currentDataProduct.responsavel},
+    {class:'.product-description-container-resume-description-text', valor: currentDataProduct.descricao},
+
 
 ]
 

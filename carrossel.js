@@ -61,8 +61,8 @@ function setDataProductCARD(dataProduct) {
 
 
 
-function createCards() {
-    const dataProducts = convert_qlikObjectLayout_array()
+async function createCards() {
+    const dataProducts = await getDataProducts()
 
     dataProducts.forEach((dataProduct) => {
         setDataProductCARD(dataProduct)
@@ -70,4 +70,3 @@ function createCards() {
     })
 }
 
-createCards()
