@@ -1,6 +1,7 @@
 var GLOBAL_QLIK;
 var GLOBAL_QLIK_APP;
 var GLOBAL_APP_OPENED = false;
+var GLOBAL_SERVER_URL = 'https://bi.grupocalcenter.com.br';
 
 const setQlikGlobal = async () => {
 
@@ -32,6 +33,8 @@ const setQlikGlobal = async () => {
     GLOBAL_APP_OPENED = true;
 }
 
+
+
 setQlikGlobal()
 
 
@@ -39,6 +42,39 @@ function getQlikObjectLayout() {
 
 }
 
+async function testDataInQlik(dataFont) {
+
+    const headers = new Headers({
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+        'X-Qlik-Xrfkey': 'ABCDEFG123456789' // Exemplo de chave Xrfkey. Use uma chave válida.
+    });
+
+    const body = JSON.stringify({
+        "name": "Experimentando",
+        "appId": ""
+    });
+
+    const url = 'https://bi.grupocalcenter.com.br/qrs/app?xrfkey=ABCDEFG123456789'; // Use uma chave Xrfkey válida.
+
+    try {
+        const response = await fetch(url, {
+            method: 'POST',
+            headers: headers,
+            body: body
+        });
+
+        const data = await response.json()
+
+        newAppUrl = 'https://bi.grupocalcenter.com.br/sense/app/'+data.id+'/overview'
+        window.open(newAppUrl, '_blank');
+
+
+    } catch (error) {
+        console.error("Erro ao criar o aplicativo no Qlik:", error);
+    }
+
+}
 
 async function getDataProducts() {
 
