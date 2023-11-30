@@ -1,7 +1,7 @@
 var GLOBAL_QLIK;
 var GLOBAL_QLIK_APP;
 var GLOBAL_APP_OPENED = false;
-var GLOBAL_SERVER_URL = 'https://bi.grupocalcenter.com.br';
+var GLOBAL_SERVER_URL = 'https://devbi.grupocalcenter.com.br';
 
 const setQlikGlobal = async () => {
 
@@ -27,7 +27,7 @@ const setQlikGlobal = async () => {
         });
 
         GLOBAL_QLIK = qlik;
-        GLOBAL_QLIK_APP = qlik.openApp('DataCatalog.qvf', config);
+        GLOBAL_QLIK_APP = qlik.openApp('d7f9f3c9-6a17-44c5-952a-1e48e2efc491', config);
 
     });
     GLOBAL_APP_OPENED = true;
@@ -37,12 +37,7 @@ const setQlikGlobal = async () => {
 
 setQlikGlobal()
 
-
-function getQlikObjectLayout() {
-
-}
-
-async function testDataInQlik(dataFont) {
+async function testDataInQlik(dataProduct) {
 
     const headers = new Headers({
         'Accept': 'application/json',
@@ -55,7 +50,7 @@ async function testDataInQlik(dataFont) {
         "appId": ""
     });
 
-    const url = 'https://bi.grupocalcenter.com.br/qrs/app?xrfkey=ABCDEFG123456789'; // Use uma chave Xrfkey válida.
+    const url = 'https://devbi.grupocalcenter.com.br/qrs/app/af7aecfa-fb56-4af7-9de3-bd58f83ec294/copy?xrfkey=ABCDEFG123456789'; // Use uma chave Xrfkey válida.
 
     try {
         const response = await fetch(url, {
@@ -66,7 +61,17 @@ async function testDataInQlik(dataFont) {
 
         const data = await response.json()
 
-        newAppUrl = 'https://bi.grupocalcenter.com.br/sense/app/'+data.id+'/overview'
+		newApp = await GLOBAL_QLIK.openApp(data.id)
+		
+		await newApp.doReload()
+		await newApp.setScript('LOAD * FROM ['+dataProduct.localizacao+'.qvd](QVD);')
+		await newApp.doReload()
+		await newApp.doSave()
+
+        newAppUrl = 'https://devbi.grupocalcenter.com.br/sense/app/'+data.id+'/overview'
+		
+		
+		
         window.open(newAppUrl, '_blank');
 
 
@@ -78,7 +83,7 @@ async function testDataInQlik(dataFont) {
 
 async function getDataProducts() {
 
-    const obj = await GLOBAL_QLIK_APP.getObject('CDmxp');
+    const obj = await GLOBAL_QLIK_APP.getObject('muuJ');
 
     const hyperCube = obj.layout.qHyperCube;
     let page = {
@@ -100,6 +105,8 @@ async function getDataProducts() {
         dataProduct.score = item[4].qText
         dataProduct.descricao = item[5].qText
         dataProduct.objectID = item[6].qText
+		dataProduct.localizacao = item[7].qText
+
 
         //* 
         const objSamples = await GLOBAL_QLIK_APP.getObject(dataProduct.objectID);

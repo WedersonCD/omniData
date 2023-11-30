@@ -44,5 +44,7 @@ tags.forEach((item)=>{
 
 
 document.getElementById('product-description-container-taste').addEventListener('click', function() {
-        testDataInQlik()
+        testDataInQlik(currentDataProduct)
 });
+
+

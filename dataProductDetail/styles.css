@@ -1,9 +1,11 @@
 body {
     align-items: baseline;
-    margin-top: 25px;
 
 }
 
+.container {
+	margin-top: 25px;
+}
 .search-container a{
     text-decoration: none;
     color: #222;
