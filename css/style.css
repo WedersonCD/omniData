@@ -17,6 +17,7 @@
     flex-direction: row;
     width: 800px;
     height: 125px;
+    justify-content: center;
 }
 
 .content-carrosel-arrow {
@@ -34,10 +35,11 @@
 
 
 .content-carrosel-dataProduct-card {
+
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    margin: 1.5px;
+    margin: 5px;
     padding: 1.5px;
     height: 100%;
     width: 250px;
