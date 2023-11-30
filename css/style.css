@@ -2,8 +2,50 @@
 .content {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     height: 100vh;
     text-align: center;
 }
+.content-pageTitle {
+    font-size: 40px;
+}
 
+
+.content-carrosel {
+    display: flex;
+    flex-direction: row;
+    width: 800px;
+    height: 125px;
+}
+
+.content-carrosel-arrow {
+    display: flex;
+    height: 100%;
+    align-items: center;
+
+}
+
+.content-carrosel-dataProduct {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.content-carrosel-dataProduct-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 1.5px;
+    padding: 1.5px;
+    height: 100%;
+    width: 250px;
+    border: 1px #c2c2c2 solid;
+
+}
+
+
+.content-carrosel-dataProduct-card-dominium {
+    font-weight: bold;
+}
